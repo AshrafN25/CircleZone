@@ -7,7 +7,7 @@ const AIChatPanel = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState([
     {
       role: 'assistant',
-      content: 'Halo! Saya asisten LingkaranKu. Tanyakan apa saja tentang materi lingkaran! 😊'
+      content: 'Halo! Saya asisten CircleZone. Tanyakan apa saja tentang materi lingkaran! 😊'
     }
   ]);
   const [inputText, setInputText] = useState('');
@@ -138,7 +138,7 @@ const AIChatPanel = ({ isOpen, onClose }) => {
               </div>
               <div>
                 <h3 className="text-headline-sm text-on-surface dark:text-gray-100">Asisten AI</h3>
-                <p className="text-body-sm text-on-surface-variant dark:text-gray-400">LingkaranKu</p>
+                <p className="text-body-sm text-on-surface-variant dark:text-gray-400">CircleZone</p>
               </div>
             </div>
             <button

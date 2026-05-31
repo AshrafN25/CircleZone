@@ -1,4 +1,4 @@
-# 🚀 Quick Start Guide - LingkaranKu
+# 🚀 Quick Start Guide - CircleZone
 
 ## Aplikasi Sudah Berjalan! ✅
 

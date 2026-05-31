@@ -30,7 +30,7 @@ const Navbar = ({ isDark, toggleDarkMode }) => {
             {/* Logo */}
             <div className="flex items-center gap-2">
               <span className="material-symbols-outlined text-primary text-3xl">trip_origin</span>
-              <span className="font-display text-headline-md text-primary">LingkaranKu</span>
+              <span className="font-display text-headline-md text-primary">CircleZone</span>
             </div>
 
             {/* Desktop Menu */}

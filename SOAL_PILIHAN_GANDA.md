@@ -1,4 +1,4 @@
-# 📝 Latihan Soal Pilihan Ganda - LingkaranKu
+# 📝 Latihan Soal Pilihan Ganda - CircleZone
 
 ## ✅ Fitur Baru: Soal Pilihan Ganda Interaktif!
 

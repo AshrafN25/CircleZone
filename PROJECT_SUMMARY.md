@@ -1,4 +1,4 @@
-# 📊 Project Summary - LingkaranKu
+# 📊 Project Summary - CircleZone
 
 ## ✅ Aplikasi Berhasil Dibuat!
 
@@ -10,7 +10,7 @@
 
 ### 1. **Struktur Proyek Lengkap**
 ```
-lingkaranku/
+circlezone/
 ├── src/
 │   ├── components/
 │   │   ├── layout/          ✅ Navbar, Sidebar, Footer
@@ -356,4 +356,4 @@ npm run preview      # Preview production build
 
 ---
 
-Terima kasih telah menggunakan LingkaranKu! 🎓✨
+Terima kasih telah menggunakan CircleZone! 🎓✨

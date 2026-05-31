@@ -1,11 +1,11 @@
-# 🎨 Features Overview - LingkaranKu
+# 🎨 Features Overview - CircleZone
 
 ## 🖥️ Visual Guide
 
 ### 1. **Hero Section**
 ```
 ┌─────────────────────────────────────────────────────┐
-│  [Logo] LingkaranKu          [Menu] [Dark] [CTA]   │
+│  [Logo] CircleZone          [Menu] [Dark] [CTA]   │
 ├─────────────────────────────────────────────────────┤
 │                                                      │
 │  🎓 Kurikulum Merdeka · SMK                         │
@@ -128,11 +128,11 @@
 ```
 ┌─────────────────────────────────────┐
 │ 🤖 Asisten AI          [X]         │
-│ LingkaranKu                         │
+│ CircleZone                         │
 ├─────────────────────────────────────┤
 │                                     │
 │ 🤖 Halo! Saya asisten              │
-│    LingkaranKu. Tanyakan           │
+│    CircleZone. Tanyakan           │
 │    apa saja tentang materi         │
 │    lingkaran! 😊                   │
 │                                     │

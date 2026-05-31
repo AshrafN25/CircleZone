@@ -1,4 +1,4 @@
-# LingkaranKu - Platform Edukasi Geometri Lingkaran
+# CircleZone - Platform Edukasi Geometri Lingkaran
 
 Platform edukasi interaktif untuk mempelajari materi Geometri Lingkaran, mencakup jenjang SMP hingga SMK (Kurikulum Merdeka).
 
@@ -106,4 +106,4 @@ Untuk pertanyaan atau saran, silakan buka issue di repository ini.
 
 ---
 
-© 2026 LingkaranKu - Proyek Geometri Lingkaran
+© 2026 CircleZone - Proyek Geometri Lingkaran

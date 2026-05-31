@@ -1,4 +1,4 @@
-# 🚀 Deployment Guide - LingkaranKu
+# 🚀 Deployment Guide - CircleZone
 
 ## Build untuk Production
 
@@ -103,7 +103,7 @@ npm install --save-dev gh-pages
 2. Update `vite.config.js`:
 ```js
 export default defineConfig({
-  base: '/lingkaranku/', // nama repository
+  base: '/circlezone/', // nama repository
   plugins: [react()],
 })
 ```
@@ -377,4 +377,4 @@ jobs:
 
 ---
 
-Selamat! Aplikasi LingkaranKu siap digunakan! 🎉
+Selamat! Aplikasi CircleZone siap digunakan! 🎉
