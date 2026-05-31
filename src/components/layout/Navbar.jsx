@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Navbar = ({ isDark, toggleDarkMode }) => {
+const Navbar = ({ isDark, toggleDarkMode, onNavigateToAbout, onNavigateToHome }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
@@ -15,11 +15,36 @@ const Navbar = ({ isDark, toggleDarkMode }) => {
   ];
 
   const handleNavClick = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Check if we're on about page
+    if (window.location.pathname === '/about') {
+      // Navigate to home first, then scroll
+      if (onNavigateToHome) {
+        onNavigateToHome();
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    } else {
+      // Normal scroll behavior
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMenuOpen(false);
+  };
+
+  const handleLogoClick = () => {
+    if (window.location.pathname === '/about') {
+      if (onNavigateToHome) {
+        onNavigateToHome();
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -28,10 +53,10 @@ const Navbar = ({ isDark, toggleDarkMode }) => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex items-center gap-2">
+            <button onClick={handleLogoClick} className="flex items-center gap-2">
               <span className="material-symbols-outlined text-primary text-3xl">trip_origin</span>
               <span className="font-display text-headline-md text-primary">CircleZone</span>
-            </div>
+            </button>
 
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-6">
@@ -59,13 +84,22 @@ const Navbar = ({ isDark, toggleDarkMode }) => {
                 </span>
               </button>
 
-              {/* CTA Button */}
-              <button
-                onClick={() => handleNavClick('#pengertian')}
-                className="hidden sm:block px-6 py-2 rounded-full bg-tertiary text-on-tertiary font-semibold hover:bg-tertiary-variant transition-colors"
-              >
-                Mulai Belajar
-              </button>
+              {/* CTA Buttons Group */}
+              <div className="hidden sm:flex items-center gap-2">
+                <button
+                  onClick={() => handleNavClick('#pengertian')}
+                  className="px-6 py-2 rounded-full bg-tertiary text-on-tertiary font-semibold hover:bg-tertiary-variant transition-colors"
+                >
+                  Mulai Belajar
+                </button>
+                <button
+                  onClick={onNavigateToAbout}
+                  className="flex items-center gap-1.5 px-4 py-2 rounded-full border border-gray-300 dark:border-gray-700 text-on-surface-variant dark:text-gray-400 hover:border-primary hover:text-primary hover:bg-primary/5 transition-colors"
+                >
+                  <span className="material-symbols-outlined text-lg">person</span>
+                  <span className="text-body-sm">About Me</span>
+                </button>
+              </div>
 
               {/* Mobile Menu Button */}
               <button
@@ -111,6 +145,16 @@ const Navbar = ({ isDark, toggleDarkMode }) => {
                     {item.label}
                   </button>
                 ))}
+                <button
+                  onClick={() => {
+                    onNavigateToAbout();
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors"
+                >
+                  <span className="material-symbols-outlined">person</span>
+                  <span className="font-semibold">About Me</span>
+                </button>
                 <button
                   onClick={() => handleNavClick('#pengertian')}
                   className="w-full px-6 py-3 rounded-full bg-tertiary text-on-tertiary font-semibold hover:bg-tertiary-variant transition-colors"

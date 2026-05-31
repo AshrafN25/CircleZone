@@ -5,6 +5,7 @@ import Sidebar from './components/layout/Sidebar';
 import Footer from './components/layout/Footer';
 import AIChatPanel from './components/ai/AIChatPanel';
 import AIChatButton from './components/ai/AIChatButton';
+import AboutMe from './pages/AboutMe';
 import {
   Hero,
   Pengertian,
@@ -27,6 +28,7 @@ import { useScrollProgress } from './hooks/useScrollProgress';
 function App() {
   const [isDark, toggleDarkMode] = useDarkMode();
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState('home');
   
   const sectionIds = [
     'hero',
@@ -47,6 +49,42 @@ function App() {
   const activeSection = useActiveSection(sectionIds);
   const scrollProgress = useScrollProgress();
 
+  // Handle page navigation
+  React.useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      setCurrentPage(path === '/about' ? 'about' : 'home');
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    
+    // Check initial path
+    const path = window.location.pathname;
+    if (path === '/about') {
+      setCurrentPage('about');
+    }
+
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const navigateToAbout = () => {
+    window.history.pushState({}, '', '/about');
+    setCurrentPage('about');
+    window.scrollTo(0, 0);
+  };
+
+  const navigateToHome = () => {
+    window.history.pushState({}, '', '/');
+    setCurrentPage('home');
+    window.scrollTo(0, 0);
+  };
+
+  // Render About Me page
+  if (currentPage === 'about') {
+    return <AboutMe isDark={isDark} toggleDarkMode={toggleDarkMode} onNavigateHome={navigateToHome} />;
+  }
+
+  // Render Home page
   return (
     <div className="min-h-screen bg-background dark:bg-gray-950">
       {/* Scroll Progress Bar */}
@@ -56,7 +94,7 @@ function App() {
       />
 
       {/* Navbar */}
-      <Navbar isDark={isDark} toggleDarkMode={toggleDarkMode} />
+      <Navbar isDark={isDark} toggleDarkMode={toggleDarkMode} onNavigateToAbout={navigateToAbout} onNavigateToHome={navigateToHome} />
 
       {/* Main Layout */}
       <div className="flex">
