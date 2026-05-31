@@ -294,7 +294,7 @@ const MateriSMK = () => {
               </div>
 
               {/* Contoh */}
-              <div className="bg-tertiary/5 dark:bg-tertiary/10 p-6 rounded-xl mb-6">
+              <div className="bg-tertiary/5 dark:bg-tertiary/10 p-6 rounded-xl">
                 <h4 className="text-headline-sm text-tertiary mb-4 flex items-center gap-2">
                   <span className="material-symbols-outlined">lightbulb</span>
                   Contoh Soal
@@ -309,78 +309,6 @@ const MateriSMK = () => {
                   <p>Sudut Keliling = ½ × Sudut Pusat</p>
                   <p>∠ACB = ½ × 80°</p>
                   <p className="text-tertiary font-bold">∠ACB = 40°</p>
-                </div>
-              </div>
-
-              {/* Kalkulator */}
-              <div className="bg-surface dark:bg-gray-800 p-6 rounded-xl">
-                <h4 className="text-headline-sm text-on-surface dark:text-gray-100 mb-4 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-tertiary">calculate</span>
-                  Kalkulator Sudut
-                </h4>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  {/* Hitung Sudut Keliling */}
-                  <div className="bg-primary/5 dark:bg-primary/10 p-4 rounded-lg">
-                    <h5 className="text-body-lg font-semibold text-primary mb-3">Hitung Sudut Keliling</h5>
-                    <div className="space-y-3">
-                      <div>
-                        <label className="text-body-sm text-on-surface-variant dark:text-gray-400 mb-2 block">
-                          Sudut Pusat (°)
-                        </label>
-                        <input
-                          type="number"
-                          placeholder="Contoh: 80"
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-surface dark:bg-gray-900 text-on-surface dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary"
-                          id="sudut-pusat-input"
-                          onInput={(e) => {
-                            const pusat = parseFloat(e.target.value);
-                            const hasil = document.getElementById('sudut-keliling-hasil');
-                            if (pusat && !isNaN(pusat)) {
-                              hasil.textContent = (pusat / 2).toFixed(2) + '°';
-                            } else {
-                              hasil.textContent = '-';
-                            }
-                          }}
-                        />
-                      </div>
-                      <div className="bg-tertiary/10 dark:bg-tertiary/20 p-4 rounded-lg">
-                        <p className="text-body-sm text-on-surface-variant dark:text-gray-400 mb-1">Sudut Keliling:</p>
-                        <p className="text-headline-md text-tertiary font-bold" id="sudut-keliling-hasil">-</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Hitung Sudut Pusat */}
-                  <div className="bg-secondary/5 dark:bg-secondary/10 p-4 rounded-lg">
-                    <h5 className="text-body-lg font-semibold text-secondary mb-3">Hitung Sudut Pusat</h5>
-                    <div className="space-y-3">
-                      <div>
-                        <label className="text-body-sm text-on-surface-variant dark:text-gray-400 mb-2 block">
-                          Sudut Keliling (°)
-                        </label>
-                        <input
-                          type="number"
-                          placeholder="Contoh: 40"
-                          className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-surface dark:bg-gray-900 text-on-surface dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-secondary"
-                          id="sudut-keliling-input"
-                          onInput={(e) => {
-                            const keliling = parseFloat(e.target.value);
-                            const hasil = document.getElementById('sudut-pusat-hasil');
-                            if (keliling && !isNaN(keliling)) {
-                              hasil.textContent = (keliling * 2).toFixed(2) + '°';
-                            } else {
-                              hasil.textContent = '-';
-                            }
-                          }}
-                        />
-                      </div>
-                      <div className="bg-tertiary/10 dark:bg-tertiary/20 p-4 rounded-lg">
-                        <p className="text-body-sm text-on-surface-variant dark:text-gray-400 mb-1">Sudut Pusat:</p>
-                        <p className="text-headline-md text-tertiary font-bold" id="sudut-pusat-hasil">-</p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
