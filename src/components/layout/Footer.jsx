@@ -70,7 +70,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center">
           <p className="text-body-sm text-on-surface-variant dark:text-gray-400">
-            Proyek Semester Matematika • Ashraf Nauval Raasya
+            Proyek Semester Matematika • Ashraf Nauval Rasya
           </p>
         </div>
       </div>
