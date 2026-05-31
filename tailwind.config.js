@@ -1,0 +1,60 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: '#1976D2',
+        'primary-variant': '#1565C0',
+        secondary: '#FFC107',
+        'secondary-variant': '#FFA000',
+        tertiary: '#4CAF50',
+        'tertiary-variant': '#388E3C',
+        background: '#FAFAFA',
+        surface: '#FFFFFF',
+        error: '#F44336',
+        'on-primary': '#FFFFFF',
+        'on-secondary': '#000000',
+        'on-tertiary': '#FFFFFF',
+        'on-background': '#212121',
+        'on-surface': '#212121',
+        'on-surface-variant': '#757575',
+        'on-error': '#FFFFFF',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'],
+      },
+      fontSize: {
+        'display-lg': ['3.5rem', { lineHeight: '1.2', fontWeight: '700' }],
+        'display-md': ['2.5rem', { lineHeight: '1.3', fontWeight: '700' }],
+        'headline-lg': ['2rem', { lineHeight: '1.4', fontWeight: '600' }],
+        'headline-md': ['1.5rem', { lineHeight: '1.4', fontWeight: '600' }],
+        'headline-sm': ['1.25rem', { lineHeight: '1.5', fontWeight: '600' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-md': ['1rem', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.5', fontWeight: '400' }],
+      },
+      spacing: {
+        'xs': '0.5rem',
+        'sm': '1rem',
+        'md': '1.5rem',
+        'lg': '2rem',
+        'xl': '3rem',
+        '2xl': '4rem',
+      },
+      borderRadius: {
+        'sm': '0.25rem',
+        'md': '0.5rem',
+        'lg': '1rem',
+        'xl': '1.5rem',
+        'full': '9999px',
+      },
+    },
+  },
+  plugins: [],
+}
