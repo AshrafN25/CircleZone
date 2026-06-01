@@ -84,6 +84,30 @@ body {
   background: #1976D2;
 }
 
+/* Thin scrollbar for sidebar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thumb-primary::-webkit-scrollbar-thumb {
+  background: #1976D2;
+  border-radius: 3px;
+}
+
+.scrollbar-thumb-primary::-webkit-scrollbar-thumb:hover {
+  background: #1565C0;
+}
+
+.scrollbar-track-gray-200::-webkit-scrollbar-track {
+  background: #E5E7EB;
+  border-radius: 3px;
+}
+
+.dark .scrollbar-track-gray-800::-webkit-scrollbar-track {
+  background: #1F2937;
+  border-radius: 3px;
+}
+
 /* Animations */
 @keyframes pulse {
   0%, 100% {
@@ -125,4 +149,14 @@ svg {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
 }
