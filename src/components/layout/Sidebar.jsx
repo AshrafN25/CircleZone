@@ -28,7 +28,7 @@ const Sidebar = ({ activeSection, onChatOpen }) => {
   return (
     <aside className="hidden lg:block sticky top-16 self-start h-[calc(100vh-4rem)] w-64 flex-shrink-0 z-30">
       <div className="px-3 py-4 h-full flex flex-col bg-surface dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800">
-        <h3 className="text-xs font-semibold text-on-surface-variant dark:text-gray-400 uppercase tracking-wide px-2 mb-3">
+        <h3 className="text-sm font-semibold text-on-surface-variant dark:text-gray-400 uppercase tracking-wide px-3 mb-4">
           Daftar Materi
         </h3>
 
@@ -39,14 +39,14 @@ const Sidebar = ({ activeSection, onChatOpen }) => {
               key={section.id}
               onClick={() => handleClick(section.id)}
               className={clsx(
-                'w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-sm transition-all',
+                'w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-[15px] transition-all',
                 activeSection === section.id
                   ? 'bg-primary/10 text-primary font-semibold'
                   : 'text-on-surface-variant dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-on-surface dark:hover:text-gray-200'
               )}
             >
-              <span className="material-symbols-outlined text-lg">{section.icon}</span>
-              <span className="flex-1 text-left text-xs">{section.label}</span>
+              <span className="material-symbols-outlined text-[22px]">{section.icon}</span>
+              <span className="flex-1 text-left">{section.label}</span>
             </button>
           ))}
         </div>
@@ -54,9 +54,9 @@ const Sidebar = ({ activeSection, onChatOpen }) => {
         <div className="pt-3 mt-3 border-t border-gray-200 dark:border-gray-700 flex-shrink-0">
           <button
             onClick={onChatOpen}
-            className="w-full flex items-center justify-center gap-2 px-3 py-2 rounded-lg bg-tertiary text-on-tertiary text-sm font-semibold hover:bg-tertiary-variant transition-colors"
+            className="w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-tertiary text-on-tertiary text-[15px] font-semibold hover:bg-tertiary-variant transition-colors"
           >
-            <span className="material-symbols-outlined text-lg">smart_toy</span>
+            <span className="material-symbols-outlined text-[22px]">smart_toy</span>
             <span>Tanya AI</span>
           </button>
         </div>

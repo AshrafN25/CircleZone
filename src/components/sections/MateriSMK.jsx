@@ -195,7 +195,7 @@ const MateriSMK = () => {
           >
             <div className="bg-gradient-to-br from-tertiary/5 to-primary/5 dark:from-tertiary/10 dark:to-primary/10 p-8 rounded-2xl">
               <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-4xl text-tertiary">angle</span>
+                 <span className="material-symbols-outlined text-4xl text-tertiary">angle</span>
                 <h3 className="text-headline-md text-on-surface dark:text-gray-100">C. Sudut Pusat dan Sudut Keliling</h3>
               </div>
 
