@@ -10,7 +10,7 @@ export const useActiveSection = (sectionIds) => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '-20% 0px -70% 0px',
+      rootMargin: '-64px 0px -50% 0px',
       threshold: 0
     };
 

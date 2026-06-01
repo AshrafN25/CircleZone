@@ -26,31 +26,31 @@ const Sidebar = ({ activeSection, onChatOpen }) => {
   };
 
   return (
-    <aside className="hidden lg:block fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 flex-shrink-0 z-30">
+    <aside className="hidden lg:block sticky top-16 self-start h-[calc(100vh-4rem)] w-64 flex-shrink-0 z-30">
       <div className="px-3 py-4 h-full flex flex-col bg-surface dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800">
         <h3 className="text-xs font-semibold text-on-surface-variant dark:text-gray-400 uppercase tracking-wide px-2 mb-3">
           Daftar Materi
         </h3>
-        
+
         {/* Menu list dengan scroll tapi scrollbar hidden */}
         <div className="flex-1 space-y-1 overflow-y-auto overflow-x-hidden scrollbar-hide">
-        {sections.map((section) => (
-          <button
-            key={section.id}
-            onClick={() => handleClick(section.id)}
-            className={clsx(
-              'w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-sm transition-all',
-              activeSection === section.id
-                ? 'bg-primary/10 text-primary font-semibold'
-                : 'text-on-surface-variant dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-on-surface dark:hover:text-gray-200'
-            )}
-          >
-            <span className="material-symbols-outlined text-lg">{section.icon}</span>
-            <span className="flex-1 text-left text-xs">{section.label}</span>
-          </button>
-        ))}
+          {sections.map((section) => (
+            <button
+              key={section.id}
+              onClick={() => handleClick(section.id)}
+              className={clsx(
+                'w-full flex items-center gap-2 px-2 py-1.5 rounded-lg text-sm transition-all',
+                activeSection === section.id
+                  ? 'bg-primary/10 text-primary font-semibold'
+                  : 'text-on-surface-variant dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-on-surface dark:hover:text-gray-200'
+              )}
+            >
+              <span className="material-symbols-outlined text-lg">{section.icon}</span>
+              <span className="flex-1 text-left text-xs">{section.label}</span>
+            </button>
+          ))}
         </div>
-        
+
         <div className="pt-3 mt-3 border-t border-gray-200 dark:border-gray-700 flex-shrink-0">
           <button
             onClick={onChatOpen}
