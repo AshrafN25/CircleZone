@@ -3,8 +3,8 @@ import SectionBadge from '../ui/SectionBadge';
 
 const MateriSMK = () => {
   return (
-    <section id="materi-smk" className="py-20 bg-surface dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="materi-smk" className="py-20 bg-surface dark:bg-gray-900 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -195,7 +195,7 @@ const MateriSMK = () => {
           >
             <div className="bg-gradient-to-br from-tertiary/5 to-primary/5 dark:from-tertiary/10 dark:to-primary/10 p-8 rounded-2xl">
               <div className="flex items-center gap-3 mb-6">
-                <span className="material-symbols-outlined text-4xl text-tertiary">angle</span>
+                 <span className="material-symbols-outlined text-4xl text-tertiary">angle</span>
                 <h3 className="text-headline-md text-on-surface dark:text-gray-100">C. Sudut Pusat dan Sudut Keliling</h3>
               </div>
 
