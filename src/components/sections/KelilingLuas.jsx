@@ -12,8 +12,8 @@ const KelilingLuas = () => {
   const luas = radiusL ? hitungLuas(parseFloat(radiusL)).toFixed(2) : null;
 
   return (
-    <section id="keliling-luas" className="py-20 bg-surface dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="keliling-luas" className="py-20 bg-surface dark:bg-gray-900 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

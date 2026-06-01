@@ -13,12 +13,17 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background-color: #FAFAFA;
   color: #212121;
+  overflow-x: hidden;
+  max-width: 100vw;
+  position: relative;
 }
 
 .dark body {
@@ -91,4 +96,33 @@ body {
 
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Prevent horizontal overflow */
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Ensure all sections don't overflow */
+section {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Ensure containers don't overflow */
+.container {
+  max-width: 100%;
+}
+
+/* Fix for SVG containers */
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for images */
+img {
+  max-width: 100%;
+  height: auto;
 }

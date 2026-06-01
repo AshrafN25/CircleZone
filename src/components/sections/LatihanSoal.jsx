@@ -73,8 +73,8 @@ const LatihanSoal = () => {
     }
 
     return (
-      <section id="latihan-soal" className="py-20 bg-background dark:bg-gray-950">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="latihan-soal" className="py-20 bg-background dark:bg-gray-950 overflow-x-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -152,8 +152,8 @@ const LatihanSoal = () => {
 
   // Quiz Screen
   return (
-    <section id="latihan-soal" className="py-20 bg-background dark:bg-gray-950">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="latihan-soal" className="py-20 bg-background dark:bg-gray-950 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

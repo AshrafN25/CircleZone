@@ -54,6 +54,9 @@ export default {
         'xl': '1.5rem',
         'full': '9999px',
       },
+      maxWidth: {
+        'screen': '100vw',
+      },
     },
   },
   plugins: [],

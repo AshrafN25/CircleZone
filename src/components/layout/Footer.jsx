@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-surface dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <footer className="bg-surface dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-20 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Brand */}
           <div>

@@ -6,10 +6,10 @@ import profilePhoto from '../assets/profile.jpg';
 
 const AboutMe = ({ isDark, toggleDarkMode, onNavigateHome }) => {
   return (
-    <div className="min-h-screen bg-background dark:bg-gray-950">
+    <div className="min-h-screen bg-background dark:bg-gray-950 overflow-x-hidden">
       <Navbar isDark={isDark} toggleDarkMode={toggleDarkMode} onNavigateToAbout={() => {}} onNavigateToHome={onNavigateHome} />
       
-      <main className="py-20">
+      <main className="py-20 overflow-x-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

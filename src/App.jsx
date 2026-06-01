@@ -86,7 +86,7 @@ function App() {
 
   // Render Home page
   return (
-    <div className="min-h-screen bg-background dark:bg-gray-950">
+    <div className="min-h-screen bg-background dark:bg-gray-950 overflow-x-hidden">
       {/* Scroll Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-primary z-50 origin-left"
@@ -97,7 +97,7 @@ function App() {
       <Navbar isDark={isDark} toggleDarkMode={toggleDarkMode} onNavigateToAbout={navigateToAbout} onNavigateToHome={navigateToHome} />
 
       {/* Main Layout */}
-      <div className="flex">
+      <div className="flex w-full max-w-full overflow-x-hidden">
         {/* Sidebar */}
         <Sidebar
           activeSection={activeSection}
@@ -105,7 +105,7 @@ function App() {
         />
 
         {/* Main Content */}
-        <main className="flex-1">
+        <main className="flex-1 min-w-0 overflow-x-hidden w-full">
           <Hero />
           <Pengertian />
           <UnsurUnsur />

@@ -12,8 +12,8 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-secondary/5 to-tertiary/5 dark:from-primary/10 dark:via-secondary/10 dark:to-tertiary/10">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/5 via-secondary/5 to-tertiary/5 dark:from-primary/10 dark:via-secondary/10 dark:to-tertiary/10 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 max-w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -91,7 +91,7 @@ const Hero = () => {
                 ease: "easeInOut"
               }
             }}
-            className="flex items-center justify-center"
+            className="flex items-center justify-center max-w-full overflow-hidden"
           >
             <svg viewBox="0 0 400 400" className="w-full max-w-md">
               {/* Background Circle with animation */}

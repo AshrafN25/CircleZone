@@ -19,8 +19,8 @@ import { APLIKASI_SEHARI_HARI } from '../../data/materiData';
 // Rumus Section Header
 export const RumusHeader = () => {
   return (
-    <section id="rumus" className="py-12 bg-gradient-to-b from-background to-surface dark:from-gray-950 dark:to-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="rumus" className="py-12 bg-gradient-to-b from-background to-surface dark:from-gray-950 dark:to-gray-900 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -55,8 +55,8 @@ export const SudutPusatKeliling = () => {
   const hasilPusat = sudutKeliling ? (parseFloat(sudutKeliling) * 2).toFixed(2) : null;
 
   return (
-    <section id="sudut-pusat-keliling-teori" className="py-20 bg-background dark:bg-gray-950">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="sudut-pusat-keliling-teori" className="py-20 bg-background dark:bg-gray-950 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="text-headline-lg text-primary mb-8">Sudut Pusat dan Sudut Keliling</h2>
           <div className="grid lg:grid-cols-2 gap-8">
@@ -126,8 +126,8 @@ export const PanjangBusur = () => {
   const panjang = radius && sudut ? hitungPanjangBusur(parseFloat(radius), parseFloat(sudut)).toFixed(2) : null;
 
   return (
-    <section id="panjang-busur-kalkulator" className="py-20 bg-surface dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="panjang-busur-kalkulator" className="py-20 bg-surface dark:bg-gray-900 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="text-headline-lg text-primary mb-8">Panjang Busur</h2>
           <div className="grid lg:grid-cols-2 gap-8">
@@ -177,8 +177,8 @@ export const LuasJuring = () => {
   const luas = radius && sudut ? hitungLuasJuring(parseFloat(radius), parseFloat(sudut)).toFixed(2) : null;
 
   return (
-    <section id="luas-juring-kalkulator" className="py-20 bg-background dark:bg-gray-950">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="luas-juring-kalkulator" className="py-20 bg-background dark:bg-gray-950 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="text-headline-lg text-primary mb-8">Luas Juring</h2>
           <div className="grid lg:grid-cols-2 gap-8">
@@ -228,8 +228,8 @@ export const GarisSinggung = () => {
   const panjang = op && r ? hitungGarisSinggung(parseFloat(op), parseFloat(r)).toFixed(2) : null;
 
   return (
-    <section id="garis-singgung-kalkulator" className="py-20 bg-surface dark:bg-gray-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="garis-singgung-kalkulator" className="py-20 bg-surface dark:bg-gray-900 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="text-headline-lg text-primary mb-8">Garis Singgung Lingkaran</h2>
           <div className="grid lg:grid-cols-2 gap-8">
@@ -269,8 +269,8 @@ export const GarisSinggung = () => {
 
 export const Penerapan = () => {
   return (
-    <section id="penerapan" className="py-20 bg-background dark:bg-gray-950">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="penerapan" className="py-20 bg-background dark:bg-gray-950 overflow-x-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <div className="flex items-center gap-4 mb-8">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
